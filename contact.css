@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Roboto+Slab:wght@100..900&family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora';
+}
+
+body{
+    background:black;
+    color: white;
+    background: url('background2.png');
+    background-repeat: no-repeat;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 10%;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: -5px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+    align-items: center;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: #f9ffac;
+    text-shadow: 0px 0px 0px #f9ffac;
+}
+
+.home, .skills{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content, .skills-content{
+    max-width: 600px;
+    border-radius: 25px;
+}
+
+.home-content h1::before, .skills-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content h1, .skills-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    background: black;
+}
+
+.home-content h3::before, .skills-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.home-content h3, .skills-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f9ffac;
+    background: black;
+    width: 390px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before, .skills-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content p, .skills-content p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .9s;
+    z-index: 2;
+}
+
+.home-content .btn-box{
+    position: relative;
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-box a{
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #f9ffac;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #f9ffac;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#f9ffac;
+    transition: .2s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
